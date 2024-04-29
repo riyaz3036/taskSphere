@@ -1,6 +1,6 @@
 <p align="center"><img src="readmeassets/logo.png" ></p>
 
-### Wanderlust is a one stop place to make your trip more than just a journey
+### taskSphere is an application to add all your task so that you never forget one
 
 - Select and book your trip from a range of Packages
 - We offer additional activities at each destination to make your trip more memorable
@@ -25,7 +25,7 @@ Visit my website at: https://task-sphere.vercel.app/
 
 ### Home Page - Desktop
 
-<img src="readmeassets/desktop_view.png"  >
+<img src="readmeassets/desktop_view.png height="  >
 
 ### Home Page - Mobile
 
