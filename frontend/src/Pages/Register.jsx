@@ -37,33 +37,35 @@ const handleChange = e=>{
 
 }
 
-const handleSubmit = async e =>{
-        e.preventDefault();
-        console.log("678")
-        try{
-            const res = await fetch(`${BASE_URL}/auth/register`,{
-                method: 'post',
-                headers:{
-                 'content-type': 'application/json'
-                },
-                body: JSON.stringify(details)
-            })
-            const result = await res.json();
+const [isSubmitting, setIsSubmitting] = useState(false);
 
-            if(!res.ok) alert(result.message)
-            else { 
-                alert("Successfully Registered!!! Please login")
-                dispatch({type:'REGISTER_SUCCESS'})
-                navigate('/login')
-            }
+const handleSubmit = async e => {
+    e.preventDefault();
+    setIsSubmitting(true); // Set submitting state to true when the form is being submitted
 
-            
+    try {
+        const res = await fetch(`${BASE_URL}/auth/register`, {
+            method: 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(details)
+        });
+        const result = await res.json();
 
-        }catch(err){
-          alert(err.message);
+        if (!res.ok) {
+            alert(result.message);
+        } else {
+            alert("Successfully Registered!!! Please login");
+            dispatch({ type: 'REGISTER_SUCCESS' });
+            navigate('/login');
         }
+    } catch (err) {
+        alert(err.message);
+    } finally {
+        setIsSubmitting(false); // Reset submitting state after the registration request is completed
+    }
 }
-
         
     return (
         <div className="register__main">
@@ -89,7 +91,7 @@ const handleSubmit = async e =>{
                                     <input type="text" placeholder="Phone Number" required id="phone" onChange={handleChange}/>
                                 </FormGroup>
 
-                                <button className="register__btn" type="submit" >Register</button>
+                                <button className="register__btn" type="submit" disabled={isSubmitting}>Register</button>
                             </Form>
 
                             <p>Already have an account?<Link to="/login">Login</Link></p>
