@@ -38,11 +38,12 @@ const AddTask = ()=>{
         }));
     }
 
-
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async e => {
         e.preventDefault();
-
+        setIsSubmitting(true);
+    
         try {
             const res = await fetch(`${BASE_URL}/task`, {
                 method: 'post',
@@ -52,17 +53,19 @@ const AddTask = ()=>{
                 body: JSON.stringify(taskDetails)
             });
             const result = await res.json();
-
+    
             if (res.ok) {
                 alert("Task added successfully!");                
             } else {
                 alert(result.message);
             }
-
+    
         } catch (err) {
             alert(err.message);
+        } finally {
+            setIsSubmitting(false); 
         }
-        navigate('/')
+        navigate('/');
     }
 
 return (
@@ -110,7 +113,7 @@ return (
                             <option value="1">Yes</option>
                         </select>
                     </FormGroup>
-                    <button className="add__" type="submit">Add</button>
+                    <button className="add__" type="submit" disabled={isSubmitting}>Add</button>
                     </Form>
 
         </div>
