@@ -35,9 +35,11 @@ const EditTask = () => {
         }));
     };
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleSubmit = async e => {
-        
         e.preventDefault();
+        setIsSubmitting(true);
 
         try {
             console.log("fffff")
@@ -56,9 +58,11 @@ const EditTask = () => {
             } else {
                 alert(result.message);
             }
-            navigate('/')
+            navigate('/');
         } catch (err) {
             alert(err.message);
+        } finally {
+            setIsSubmitting(false); 
         }
         
     };
@@ -105,7 +109,7 @@ const EditTask = () => {
                             <option value="1">Yes</option>
                         </select>
                     </FormGroup>
-                    <button className="edit__" type="submit">Update</button>
+                    <button className="edit__" type="submit" disabled={isSubmitting}>Update</button>
                 </Form>
             </div>
         </div>
