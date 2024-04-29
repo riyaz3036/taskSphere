@@ -1,23 +1,22 @@
-<p align="center"><img src="readmeassets/logo.png" ></p>
+<p align="center"><img src="readmeassets/logo.png" width="200px" ></p>
 
 ### taskSphere is an application to add all your task so that you never forget one
 
-- Select and book your trip from a range of Packages
-- We offer additional activities at each destination to make your trip more memorable
-- Create an account to book yor trip and view them anytime!
+- Add various types of task in your day to day life
+- Create an account to get started now!
 
 ### Features
 
-- You can view all tha available destinations and packages in the home page
-- By clicking on book now on the tour package you can view all the details of the tour
-- A tour has a fixed Iternary of destinations.
-- Additional to the normal Iternary you can add addition activities at that destination 
-- You can also view the passenger list of the passage by clicking get passenger list
-- Each tour package has a vacancy, you cannot book if it is less that the guest size you are booking for
-- It also applies for the activities
-- The discount is applied according to you membership (premium user: 50%, gold user 10% , normal user 0%)
-- Once you have booked your tour you can view your booking details by clicking on Bookings in the headers section
-- For testing purpose you can change your membership and balance by clicking on your name in the header section
+- You can add a task of specific type
+- A task can be personal/Professiona , important/not, repeat once/Daily
+- with the help of the filters present on the screen, one can also filter taks to view
+- One can edit/delete his task anytime
+- Once the task is completed it will be tagged completed (else upcoming)
+
+### Upcoming Features
+
+- Reminders and notifications of tasks upcoming very soon
+
 
 ## A sneak peek into what we have here!
 
