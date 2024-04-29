@@ -1,0 +1,46 @@
+.my__tasks{ 
+    padding: 20px;
+}
+.tasks__title,.filters{
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.my__tasks__main {
+    display:flex;
+    column-gap: 20px;
+    padding: 10px;
+}
+    
+.section__a,.section__b,.section__c{
+    padding: 10px;
+}
+
+.tasks__title h5{
+    margin:0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+
+    @media (max-width: 600px){
+
+        .tasks__title{
+            display: none;
+        }
+        .filters{
+            display:block;
+        }        
+        .my__tasks{
+            display: block; 
+            justify-content: center;
+            width: 100%; 
+        }
+    
+        .my__tasks__main{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+    }

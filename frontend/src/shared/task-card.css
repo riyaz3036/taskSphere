@@ -1,0 +1,218 @@
+.task__card{
+    border: 0.5px solid #B8B8B8;
+    width: 360px;
+}
+
+/* TAG type A */
+
+.tag__a{
+    padding: 4px 8px 4px 8px;
+    border-radius: 20px;
+    display:flex;
+    align-items: center;
+  }
+  
+  .tag__a h5{
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+  }
+
+/* TAG type B */
+.tag__b{
+    background-color: #F7F7F7;
+    padding: 2px 4px 2px 4px;
+    border-radius: 20px;
+    
+}
+
+.tag__b__img{
+    width: 16px;
+    height: 16px;
+    padding: 0.67px; 
+    display: flex;
+    justify-content: center; 
+}
+
+.tag__b__img img{
+    width: 14.67px;
+    height: 14.67px;
+}
+
+/* Task Card Top */
+.imp__img img{
+    width: 10px;
+    height: 10px;
+    
+}
+
+
+
+/* Task Card title section */
+.task__card__title h4{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+/* Task Card Date and Time section */
+.date__{
+    gap: 5px;
+}
+
+.date__img img{
+    color: #767676; 
+    position: absolute;
+    left: 2px;
+    top: 1.33px;
+    width: 12px;
+    height: 13.33px; 
+    
+}
+
+.date__ p{
+    margin: 0;
+    color: #767676;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+}
+
+.time__{
+    color: #767676;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 14.63px;
+}
+
+
+/* description */
+.desc{
+    background-color: #F7F7F7;
+    padding: 8px 5px 8px 5px;
+}
+
+.desc p{
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    overflow-wrap: break-word;  
+}
+
+
+
+/* Delete Task section */
+.delete_task{
+  background-color: #CC2610;
+  border-radius: 20px;
+  border: none;
+}
+
+.delete_task h5{
+    margin: 0;
+    color:#FFECE2;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.delete__img img{
+    width: 16.67px;
+    height: 16.67px;
+    position: absolute;
+    top: 1.67px;
+    left: 1.67px; 
+}
+
+.delete__main{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 10px
+}
+
+.delete__main h5{
+    width: 100%;
+    text-align: center;
+    margin:0;
+    /* background-color: green; */
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.yes__no{
+    width:100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.yes__no button{
+    font-size: 14px;
+    margin-left: 20px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+}
+
+/* Edit Task section */
+.edit_task{
+    background-color: #fff;
+    border: 1px solid #5F69C7;
+    border-radius: 20px;
+}
+
+.edit_task h5{
+margin: 0;
+color: #5F69C7;
+font-size: 12px;
+font-weight: 500;
+line-height: 15px;
+}
+
+.edit__img img{
+    width: 16.67px;
+    height: 16.67px;
+    position: absolute;
+    top: 1.67px;
+    left: 1.67px; 
+}
+
+
+@media (max-width: 600px){
+    .task__card{        
+        width: 335px;
+    }
+
+    .tag__a{
+        padding: 0px 4px 0px 4px ;
+        border-radius: 20px;
+        height:20px;
+    }
+      
+    .tag__a h5{
+        font-size: 10px;
+        line-height: 12.19px;
+    }
+    
+    .task__card__title h4{
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+    }
+
+    .date__ p{
+        font-size: 10px;
+        line-height: 12.19px;
+    }
+    
+    .time__{
+        font-size: 10px;    
+        line-height: 12.19px;
+    }
+}

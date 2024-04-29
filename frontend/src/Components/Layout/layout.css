@@ -1,0 +1,12 @@
+.main-content {
+    display: grid;
+    grid-template-columns: 224px 1fr ;
+    column-gap: 24px;
+}
+
+@media (max-width: 600px){
+  .main-content{
+    display: block;
+  }
+}
+    

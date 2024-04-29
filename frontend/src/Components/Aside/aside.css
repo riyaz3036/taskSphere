@@ -1,0 +1,103 @@
+
+
+.menu{
+    padding: 5px 0px 84px 0px;
+    height: 100%; 
+    width: 224px;
+    margin-left: 10px; 
+}
+
+.home__menu{
+    
+    background-color: #F0F0F0;  
+    border-bottom: 5px solid #DC5B19;
+    cursor: pointer; 
+    margin-bottom: 20px;
+}
+
+    
+.home__menu__img img{
+    width: 20px;
+    height: 17px;
+    position: absolute;
+    top: 3.2px;
+    left: 2px;
+}
+
+.home__menu h5{
+    margin:0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.custom__link{
+    text-decoration: none;
+    color: inherit;
+}
+.custom__link:hover{
+    color:black;
+}
+
+.user__name{
+    margin-bottom: 10px;
+    background-color: #F0F0F0;
+    padding: 10px;
+}
+.user__name h5{
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.sec__btn{
+    
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+.sec__btn button{
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 5px;
+}
+.sec__btn h5{
+  color: #fff;
+  margin:0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+
+.add__btn{
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.add__btn button{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    gap: 5px;
+}
+.add__btn h5{
+  color: #fff;
+  margin:0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 600px){
+
+    .menu{
+        display: none;
+    }
+}

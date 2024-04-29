@@ -1,0 +1,72 @@
+
+
+/* Header for mobile screen */
+.header__mob{
+    background-color: #fff;
+    display:none;
+    padding: 20px;
+    margin-bottom: 21px; 
+    border-bottom: 1px solid #B8B8B8;
+    position: sticky;
+    top: 0;
+}
+
+
+.header__mob h5{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+
+.search img{
+    width: 17.49px;
+    height: 17.49px;
+    top: 3.26px;
+    left: 3.25px;
+}
+
+.notification_b img{
+    width: 16px;
+    height: 19.5px;
+    top: 2.25px;
+    left: 4px;
+}
+
+/* Header for Desktop */
+.header__desk{
+    background-color: #fff;
+    border-bottom: 1px solid #B8B8B8;
+    position: sticky;
+    top: 0;
+}
+
+.header__title{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+
+.bell__img{
+    width: 32.15px;
+    height: 38px;
+    top: 4px;
+    left: 8px; 
+}
+
+.dot__{
+    background-color: #DC5B19;
+    top: 10px;
+    left: 30.37px;
+}
+
+
+
+@media (max-width: 600px){
+
+    .header__mob{
+        display:flex;
+    }
+    .header__desk{
+        display: none;
+    }
+}
