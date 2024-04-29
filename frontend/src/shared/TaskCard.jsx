@@ -19,8 +19,11 @@ const TaskCard =({task,isCompleted})=>{
         setDeletePopup(!deletePopup);
     };
 
-    const deleteTask = async () =>{
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const deleteTask = async () =>{
+        setIsSubmitting(true);
 
         try {
             // Sending DELETE request to API endpoint
@@ -39,6 +42,8 @@ const TaskCard =({task,isCompleted})=>{
             }
         } catch (error) {
             alert('Error deleting task:', error);
+        }finally {
+            setIsSubmitting(false); 
         }
 
          navigate('/');
@@ -156,7 +161,7 @@ return (
     <h5>Are you sure you want to delete the task?</h5>
     <div className="yes__no">
         <div>
-        <button onClick={deleteTask} style={{backgroundColor: '#CC2610', color: '#fff'}}>Yes</button>
+        <button onClick={deleteTask} style={{backgroundColor: '#CC2610', color: '#fff'}} disabled={isSubmitting}>Yes</button>
         <button onClick={toggleDelete}>No</button>
         </div>
     </div>
