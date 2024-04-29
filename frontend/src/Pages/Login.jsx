@@ -25,41 +25,38 @@ const Login = ()=>{
     const handleChange = e=>{
         setCredentials(prev=>({...prev,[e.target.id]:e.target.value}));
     }
-
+    
+    const [isSubmitting, setIsSubmitting] = useState(false);
    
-   const handleSubmit = async e=>{
-    e.preventDefault();
-    dispatch({type:'LOGIN_START'})
-    
+    const handleSubmit = async e => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        dispatch({ type: 'LOGIN_START' });
 
+        try {
+            const res = await fetch(`${BASE_URL}/auth/login`, {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                credentials: 'include',
+                body: JSON.stringify(credentials)
+            });
+            const result = await res.json();
+            if (!res.ok) {
+                alert(result.message);
+                return;
+            }
 
-    try{
-    
-        const res = await fetch(`${BASE_URL}/auth/login`,{
-            method: 'post',
-            headers:{
-             'content-type': 'application/json'
-            },
-            credentials: 'include',
-            body: JSON.stringify(credentials)
-        })
-        const result = await res.json();
-        if(!res.ok) {
-            alert(result.message)
-            return;
+            dispatch({ type: 'LOGIN_SUCCESS', payload: result.data });
+            alert("Login Successful");
+            navigate('/');
+        } catch (e) {
+            dispatch({ type: 'LOGIN_FAILURE', payload: e.message });
+        } finally {
+            setIsSubmitting(false); 
         }
-
-        
-        dispatch({type:'LOGIN_SUCCESS', payload:result.data})
-        alert("Login Successfull")
-        navigate('/')
-
-    }catch(e){
-        dispatch({type:'LOGIN_FAILURE', payload:e.message})
     }
-
-
-   }
     
     return (
         <div className="login__main">
@@ -77,7 +74,7 @@ const Login = ()=>{
                                     <input type="password" placeholder="Password" required id="password" onChange={handleChange} />
                                 </FormGroup>
 
-                                <button className="login__btn" type="submit" >Login</button>
+                                <button className="login__btn" type="submit" disabled={isSubmitting}>Login</button>
                             </Form>
 
                             <p>Dont have an account?<Link to="/register">Register</Link></p>
