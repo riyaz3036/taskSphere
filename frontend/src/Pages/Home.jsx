@@ -152,7 +152,7 @@ return (
     </div>
             
     
-        {userData.tasks && userData.tasks.length === 0 && <p>No tasks</p>}
+        {userData.tasks && userData.tasks.length === 0 && <p>(No tasks yet)</p>}
         </div> 
     </>
 
