@@ -25,11 +25,23 @@ Visit my website at: https://task-sphere.vercel.app/
 
 ### Home Page - Desktop
 
-<img src="readmeassets/desktop_view.png height="  >
+<img src="readmeassets/desktop_view.png" width="500px" >
 
 ### Home Page - Mobile
 
-<img src="readmeassets/mobile_view.png"  >
+<img src="readmeassets/mobile_view.png" width="300px" >
+
+### Login Page - Desktop
+
+<img src="readmeassets/login.png" width="500px" >
+
+### Register Page - Desktop
+
+<img src="readmeassets/register.png" width="500px" >
+
+### Add Task Page - Desktop
+
+<img src="readmeassets/add-task.png" width="500px" >
 
 
 
