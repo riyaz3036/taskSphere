@@ -1,5 +1,6 @@
 .my__tasks{ 
     padding: 20px;
+    width:100%;
 }
 .tasks__title,.filters{
     margin-bottom: 20px;
@@ -8,13 +9,9 @@
 
 .my__tasks__main {
     display:flex;
-    column-gap: 20px;
     padding: 10px;
 }
     
-.section__a,.section__b,.section__c{
-    padding: 10px;
-}
 
 .tasks__title h5{
     margin:0;
@@ -22,6 +19,18 @@
     font-weight: 600;
     line-height: 30px;
 }
+
+.no__login{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no__login h5{
+    color: #6e7074;
+}
+
 
 
     @media (max-width: 600px){
@@ -42,5 +51,8 @@
             display: flex;
             flex-direction: column;
             align-items: center; 
+        }
+        .no__login h5{
+            font-size: 1.2rem;
         }
     }
