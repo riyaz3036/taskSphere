@@ -20,8 +20,6 @@ const Home = ()=>{
     const [completed,setCompleted] = useState(false);
     const [upcoming, setUpcoming] = useState(false);
     
-    const[taskCount,setTaskCount]=useState(0);
-    
 
     
 return (
@@ -70,7 +68,7 @@ return (
 
         const isToday = (new Date(taskYear, taskMonth - 1, taskDay) === new Date(currentYear, currentMonth - 1, currentDay));
 
-        if ( !(personal || professional || today || important || completed || upcoming) || (((today && (isToday || task.repeat)) || (!today)) && ((personal && task.type==="personal") || (!personal)) && ((professional && task.type==="professional") || (!professional)) && ((important && task.important) || (!important)) && ((completed && isCompleted) || (!completed)) && ((upcoming && !isCompleted) || (!upcoming)) )) {
+        if ( !(personal || professional || today || important || completed || upcoming) || (((today && (isToday || task.repeat)) || (!today)) && ((personal && task.type==="personal") || (!personal)) && ((professional && task.type==="professional") || (!professional)) && ((important && task.important) || (!important)) && ((completed && (isCompleted && !task.repeat)) || (!completed)) && ((upcoming && (!isCompleted || task.repeat)) || (!upcoming)) )) {
             return <div className="task__card__cont"><TaskCard key={task._id} task={task} isCompleted={isCompleted} /></div>;
         } else {
             return null; 
@@ -106,7 +104,7 @@ return (
 
         const isToday = (new Date(taskYear, taskMonth - 1, taskDay) === new Date(currentYear, currentMonth - 1, currentDay));
 
-        if ( !(personal || professional || today || important || completed || upcoming) || (((today && (isToday || task.repeat)) || (!today)) && ((personal && task.type==="personal") || (!personal)) && ((professional && task.type==="professional") || (!professional)) && ((important && task.important) || (!important)) && ((completed && isCompleted) || (!completed)) && ((upcoming && !isCompleted) || (!upcoming)) )) {
+        if ( !(personal || professional || today || important || completed || upcoming) || (((today && (isToday || task.repeat)) || (!today)) && ((personal && task.type==="personal") || (!personal)) && ((professional && task.type==="professional") || (!professional)) && ((important && task.important) || (!important)) && ((completed && (isCompleted && !task.repeat)) || (!completed)) && ((upcoming && (!isCompleted || task.repeat)) || (!upcoming)) )) {
             return <div className="task__card__cont"><TaskCard key={task._id} task={task} isCompleted={isCompleted} /></div>;
         } else {
             return null; 
@@ -142,7 +140,7 @@ return (
 
         const isToday = (new Date(taskYear, taskMonth - 1, taskDay) === new Date(currentYear, currentMonth - 1, currentDay));
 
-        if ( !(personal || professional || today || important || completed || upcoming) || (((today && (isToday || task.repeat)) || (!today)) && ((personal && task.type==="personal") || (!personal)) && ((professional && task.type==="professional") || (!professional)) && ((important && task.important) || (!important)) && ((completed && isCompleted) || (!completed)) && ((upcoming && !isCompleted) || (!upcoming)) )) {
+        if ( !(personal || professional || today || important || completed || upcoming) || (((today && (isToday || task.repeat)) || (!today)) && ((personal && task.type==="personal") || (!personal)) && ((professional && task.type==="professional") || (!professional)) && ((important && task.important) || (!important)) && ((completed && (isCompleted && !task.repeat)) || (!completed)) && ((upcoming && (!isCompleted || task.repeat)) || (!upcoming)) )) {
             return <TaskCard key={task._id} task={task} isCompleted={isCompleted} />;
         } else {
             return null; 
@@ -152,13 +150,13 @@ return (
     </div>
             
     
-        {userData.tasks && userData.tasks.length === 0 && <p>(No tasks yet)</p>}
+        {userData.tasks && userData.tasks.length === 0 && <div><h5 style={{color:'#6e7074'}}>(No tasks)</h5></div>}
         </div> 
     </>
 
     :
 
-    <div>(Profile--Login and Start your Journey)</div>
+    <div className="no__login"><h5>(Click on Profile and Login to Start your Journey)</h5></div>
    }
       
    
