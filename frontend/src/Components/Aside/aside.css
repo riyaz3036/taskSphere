@@ -4,7 +4,7 @@
     padding: 5px 0px 84px 0px;
     height: 100%; 
     width: 224px;
-    margin-left: 10px; 
+    /* margin-left: 10px; */
 }
 
 .home__menu{
@@ -96,7 +96,6 @@
 
 
 @media (max-width: 600px){
-
     .menu{
         display: none;
     }
