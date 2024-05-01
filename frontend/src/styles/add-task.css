@@ -1,6 +1,7 @@
 .add__main{
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
+    margin-top: 20px; 
 }
 
 .add__container{
