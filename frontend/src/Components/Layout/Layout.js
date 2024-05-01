@@ -9,11 +9,12 @@ const Layout = () => {
   return (
     <div className="layout-container">
       <Header />
+      <div className="sidebar"><Aside /></div>
       <div className="main-content">
-        <Aside />
         <Routers />
       </div>
-      <Footer />
+
+      <div className="footer__layout"><Footer /></div>
     </div>
   )
 };
