@@ -1,12 +1,28 @@
+.layout-container{
+  min-height: 100vh; 
+  width: 100vw; 
+}
+
+.sidebar{
+  height: 100%;
+  position: fixed; 
+  
+}
 .main-content {
-    display: grid;
-    grid-template-columns: 224px 1fr ;
-    column-gap: 24px;
+    height: 100%;
+    margin-left: 234px;
+    padding-bottom: 100px;
+}
+
+.footer__layout{
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
 }
 
 @media (max-width: 600px){
   .main-content{
-    display: block;
+    margin: 0;
   }
-}
+} 
     
